@@ -1,0 +1,311 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.svgImage{
+    padding: 0;
+}
+
+.headingDiv1{
+    flex: 1;
+}
+.headingDiv2{
+    flex: 1;
+    text-align: center;
+}
+
+.mainHeading{
+    color: white;
+    background-color: #575757;
+    border: 1px solid #003800;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#NavigationSection{
+    padding: 30px;
+}
+
+.navLinks{
+    list-style: none;
+    margin-top: 20px;
+}
+.navLinks > li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navLinks > li.active{
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.navLinks > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@media(min-width: 800px){
+    
+    #NavigationSection{
+        display: flex;
+    }
+    .mainHeading{
+        font-size: 25px;
+    }
+}
+
+
+
+#aboutmeSection{
+    margin-top: 50px;
+    padding: 30px 100px;
+}
+
+.am-heading{
+    border-bottom: 2px solid black;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.am-content{
+    padding-left: 20px;
+    width: 95%;
+    font-size: 20px;
+}
+
+.pI-borderDiv{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    border-right: 3px dotted black;
+    border-bottom: 3px dotted black;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+}
+
+
+.profileImage{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin: 30px 0 0 40px;
+    background-image: url('./images/pp.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+    margin: 0 auto;
+    padding: 0 15px 15px 0;
+}
+
+/* @media(max-width: 800px){
+    .headingDiv1{
+        display: none;
+    }
+    .navLinks > li{
+        font-size: 18px;
+    }
+    .profileImage{
+        display: none;
+    }
+} */
+
+#serviceSectionOutside{
+    margin-top: -100px;
+}
+.svgImage{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+#serviceSection{
+    background-color: #e6eff7;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.ss-heading{
+    border-bottom: 2px solid black;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.ss-CH{
+    margin-top: 30px;
+}
+.ss-CH > h4{
+    background-color: #294c6b;
+    padding: 10px 15px;
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+}
+
+.ss-CH > p{
+    color: black;
+    margin:  0 auto;
+    font-weight: 500;
+    width: 60%;
+}
+
+#projectSection{
+    margin-top: 40px;
+    text-align: center;
+    height: 500px;
+}
+
+.pS-Heading{
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #575757;
+    border: 1px solid #003800;
+    color: white;
+    border-radius: 20px;
+}
+
+.projectDiv{
+    text-align: left;
+    padding: 20px 100px;
+}
+
+.projectDiv h3{
+    color: #294c6b;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    position: relative;
+} 
+
+.mainPDiv{
+    padding-left: 50px;
+}
+.p-image{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+.langUsed ul {
+    margin-top: 20px;
+}
+
+.langUsed ul li{
+    display: inline;
+    margin: 5px;
+    background-color: coral;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.projectDiv h3::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4d7a0c;
+    position: absolute;
+    top: 35%;
+    left: -15px;
+
+}
+
+.p-desp{
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    left: -70px;
+    top: 40px;
+}
+
+.githubLinkP{
+    border: 2px solid #4d7a0c;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    color: black;
+    margin-right: 5px;
+}
+
+.githubLinkP:hover{
+    background-color: #4d7a0c;
+    color: white;
+    text-decoration: none !important;
+}
+
+.demoLinkP{
+    border: 2px solid #c94b2c;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    color: black;
+    cursor: pointer;
+}
+
+.demoLinkP:hover{
+    background-color: #c94b2c;
+    color: white;
+    text-decoration: none !important;
+}
+
+
+@media(max-width: 800px){
+    .headingDiv1{
+        display: none;
+    }
+    .navLinks > li{
+        font-size: 18px;
+    }
+    .profileImage{
+        display: none;
+    }
+    #aboutmeSection{
+        padding: 30px 10px;
+    }
+    /* .langUsed ul li{
+        margin: 2px;
+        font-size: 10px;
+    } */
+    .p-desp{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .mainPDiv{
+        padding-left: 0;
+    }
+    .projectDiv{
+        padding: 50px;
+    }
+}
+
+@media(max-width: 600px){
+    .p-image{
+        width: 400px;
+    }
+}
