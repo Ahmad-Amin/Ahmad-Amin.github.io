@@ -75,7 +75,7 @@ html{
 
 
 #aboutmeSection{
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 30px 100px;
 }
 
@@ -306,7 +306,7 @@ html{
         padding-left: 0;
     }
     .projectDiv{
-        padding: 50px;
+        padding: 40px;
     }
 }
 
@@ -314,4 +314,46 @@ html{
     .p-image{
         width: 400px;
     }
+}
+
+.nav-item, .nav-link{
+    padding: 0;
+}
+
+.nav-item{
+    margin: 10px 25px;
+}
+
+.navbar{
+    padding: 0;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding-bottom: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #d3dbd5;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus{
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
+    background-color: #575757;
+    border: 1px solid #003800;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.navbar-collapse{
+    background-color: #575757;
+    color: white;
 }

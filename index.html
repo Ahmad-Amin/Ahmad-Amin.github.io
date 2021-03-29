@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
     <title>Personal Website</title>
 </head>
+
 <body>
-    
-    <section id="NavigationSection">
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <!-- <a class="navbar-brand" href="#">Front-End Developer</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutmeSection">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projectSection">Porfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#serviceSectionOutside">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+
+    <!-- <section id="NavigationSection">
         <div class="headingDiv1">
             <h2 class="mainHeading">Front-End Developer</h2>
         </div>
@@ -25,8 +55,8 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        
-    </section>
+
+    </section> -->
 
     <section id="aboutmeSection">
         <div class="row">
@@ -35,19 +65,22 @@
                     <h3 class="am-heading">About Me</h3>
 
                     <p class="am-content">
-                        This is Ahmad Amin. I am currently studying Bachelor's in Computer Science. This is my 3rd year. I am also pursuing my passion of Front-end development along with my studies. Currently, this is also the 3rd year of me in the world of website development and still continue evolving and learning many new latest technologies in the field of website Development.
-                        There are many languages that I know e.g. R, python, C++, Java, Node.js, React etc.  
+                        This is Ahmad Amin. I am currently studying Bachelor's in Computer Science. This is my 3rd year.
+                        I am also pursuing my passion of Front-end development along with my studies. Currently, this is
+                        also the 3rd year of me in the world of website development and still continue evolving and
+                        learning many new latest technologies in the field of website Development.
+                        There are many languages that I know e.g. R, python, C++, Java, Node.js, React etc.
                     </p>
                     <p class="am-content">
-                        So feel free to contact me, if you have any kind of work that suits me. 
+                        So feel free to contact me, if you have any kind of work that suits me.
                         Checkout my github profile, if you are interested in me and want to see more projects.
                     </p>
-                    
+
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="aboutme-image">
-                    
+
                     <div class="profileImage">
                         <div class="pI-borderDiv"></div>
                     </div>
@@ -81,7 +114,7 @@
                     </div>
                 </div>
             </div>
-        </section>   
+        </section>
     </section>
 
     <section id="projectSection">
@@ -110,12 +143,14 @@
                             This is the simple sort visulaizer, which uses different
                             algorithms to sort the array. In this demo, the height of
                             1 tower represents the value in an array. You can see
-                            that after sorting all of the towers will be in 
+                            that after sorting all of the towers will be in
                             ascending order. This algorithms are: Bubble Sort,
                             Merge Sort etc.
                         </p>
-                        <a href="https://github.com/Ahmad-Amin/sort-visual" target="_blank" class="githubLinkP">Github</a>
-                        <a href="https://ahmad-amin.github.io/sort-visual/" target="_blank" class="demoLinkP">Live Demo</a>
+                        <a href="https://github.com/Ahmad-Amin/sort-visual" target="_blank"
+                            class="githubLinkP">Github</a>
+                        <a href="https://ahmad-amin.github.io/sort-visual/" target="_blank" class="demoLinkP">Live
+                            Demo</a>
                     </div>
                 </div>
             </div>
@@ -143,13 +178,14 @@
                     <div class="p-desp">
                         <h4>Decription</h4>
                         <p>
-                            Hey, This is Ahmad Amin. This is my another new Website created using php backend. 
-                            The whole front-end design and back-end coding is done by me. So, you can see that 
-                            It is a whole package of Full Stack Developement (frontend + backend coding). You can 
-                            download the code and con run it on any PC, just read the instructions carefully to run 
+                            Hey, This is Ahmad Amin. This is my another new Website created using php backend.
+                            The whole front-end design and back-end coding is done by me. So, you can see that
+                            It is a whole package of Full Stack Developement (frontend + backend coding). You can
+                            download the code and con run it on any PC, just read the instructions carefully to run
                             it succesfully Some images of the website design are attached
                         </p>
-                        <a href="https://github.com/Ahmad-Amin/E-commerce-Website-php" target="_blank" class="githubLinkP">Github</a>
+                        <a href="https://github.com/Ahmad-Amin/E-commerce-Website-php" target="_blank"
+                            class="githubLinkP">Github</a>
                         <a href="#projectSection" onclick="noDemo()" class="demoLinkP">Live Demo</a>
                     </div>
                 </div>
@@ -179,15 +215,18 @@
                             Hello, This is Ahmad Amin. I had completed another project using JavaScript Library
                             i.e. React.js. This is a simple Todo list application, where you can simply add
                             and remove the items from the list with the beautifull minimalist design.
-                            I used simple states (in classful components for the state managment). Things that I am managing in the state are:
+                            I used simple states (in classful components for the state managment). Things that I am
+                            managing in the state are:
 
                             <ol>
-                              <li>Total items in the list [an array of Object]</li>
-                              <li>The new Input entered by the user </li>
+                                <li>Total items in the list [an array of Object]</li>
+                                <li>The new Input entered by the user </li>
                             </ol>
                         </p>
-                        <a href="https://github.com/Ahmad-Amin/TO-DO-list-React" target="_blank" class="githubLinkP">Github</a>
-                        <a href="https://ahmad-amin.github.io/TO-DO-list-React/" target="_blank" class="demoLinkP">Live Demo</a>
+                        <a href="https://github.com/Ahmad-Amin/TO-DO-list-React" target="_blank"
+                            class="githubLinkP">Github</a>
+                        <a href="https://ahmad-amin.github.io/TO-DO-list-React/" target="_blank" class="demoLinkP">Live
+                            Demo</a>
                     </div>
                 </div>
             </div>
@@ -215,13 +254,14 @@
                     <div class="p-desp">
                         <h4>Decription</h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and 
-                            typesetting industry. Lorem Ipsum has been the 
-                            industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and 
-                            scrambled it to make a type specimen book. 
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book.
                         </p>
-                        <a href="https://github.com/Ahmad-Amin/youtube_clone_react-API" target="_blank" class="githubLinkP">Github</a>
+                        <a href="https://github.com/Ahmad-Amin/youtube_clone_react-API" target="_blank"
+                            class="githubLinkP">Github</a>
                         <a href="#projectSection" onClick="noDemo()" class="demoLinkP">Live Demo</a>
                     </div>
                 </div>
@@ -231,10 +271,11 @@
 
 
     <script>
-        function noDemo(){
+        function noDemo() {
             alert("Sorry, It's Demo is currently not available")
         }
     </script>
 
 </body>
+
 </html>
