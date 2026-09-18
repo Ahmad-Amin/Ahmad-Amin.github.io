@@ -1,281 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Amin — Moved</title>
+  <meta name="description" content="This site has moved to techwithswag.com">
+  <meta http-equiv="refresh" content="5; url=https://techwithswag.com">
+  <link rel="canonical" href="https://techwithswag.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
 
-    <link rel="stylesheet" href="style.css">
-    <title>Personal Website</title>
+    :root {
+      --bg-0: #05070f;
+      --bg-1: #0b0f1e;
+      --accent: #7c9bff;
+      --accent-2: #a78bfa;
+      --text-hi: #f5f6fb;
+      --text-lo: #9aa3c0;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      overflow: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-0);
+      color: var(--text-hi);
+      text-align: center;
+    }
+
+    /* ambient glow layer */
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      width: 60vmax;
+      height: 60vmax;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.35;
+      z-index: 0;
+      pointer-events: none;
+      animation: drift 16s ease-in-out infinite alternate;
+    }
+    body::before {
+      top: -20vmax;
+      left: -15vmax;
+      background: radial-gradient(circle, var(--accent), transparent 70%);
+    }
+    body::after {
+      bottom: -22vmax;
+      right: -15vmax;
+      background: radial-gradient(circle, var(--accent-2), transparent 70%);
+      animation-delay: -8s;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(4vmax, 3vmax) scale(1.08); }
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.035;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 460px;
+      animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: var(--text-hi);
+      background: linear-gradient(135deg, rgba(124,155,255,0.18), rgba(167,139,250,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02), 0 20px 40px -20px rgba(124,155,255,0.35);
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-lo);
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      letter-spacing: -0.01em;
+      margin: 0 0 14px;
+      background: linear-gradient(135deg, #ffffff, #b9c2e6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-lo);
+      margin: 0 0 34px;
+    }
+
+    p strong {
+      color: var(--text-hi);
+      font-weight: 500;
+    }
+
+    a.button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #060814;
+      text-decoration: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 30px -8px rgba(124,155,255,0.55);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    a.button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px -8px rgba(124,155,255,0.7);
+    }
+    a.button:active {
+      transform: translateY(0);
+    }
+    a.button svg {
+      width: 15px;
+      height: 15px;
+      transition: transform 0.2s ease;
+    }
+    a.button:hover svg {
+      transform: translateX(3px);
+    }
+
+    .redirect-note {
+      margin-top: 22px;
+      font-size: 0.8rem;
+      color: #6b7394;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before, body::after, .card { animation: none; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="noise"></div>
 
-<!--     <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="#">Front-End Developer</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#aboutmeSection">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projectSection">Porfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#serviceSectionOutside">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-    <br>
-
-
-    <!-- <section id="NavigationSection">
-        <div class="headingDiv1">
-            <h2 class="mainHeading">Front-End Developer</h2>
-        </div>
-        <div class="headingDiv2">
-            <ul class="navLinks">
-                <li><a href="#aboutmeSection">Home</a></li>
-                <li><a href="#projectSection">Portfolio</a></li>
-                <li><a href="#serviceSectionOutside">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-    </section> -->
-
-    <section id="aboutmeSection">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="aboutme-content">
-                    <h3 class="am-heading">About Me</h3>
-
-                    <p class="am-content">
-                        This is Ahmad Amin. I am currently studying Bachelor's in Computer Science. This is my 3rd year.
-                        I am also pursuing my passion of Front-end development along with my studies. Currently, this is
-                        also the 3rd year of me in the world of website development and still continue evolving and
-                        learning many new latest technologies in the field of website Development.
-                        There are many languages that I know e.g. R, python, C++, Java, Node.js, React etc.
-                    </p>
-                    <p class="am-content">
-                        So feel free to contact me, if you have any kind of work that suits me.
-                        Checkout my github profile, if you are interested in me and want to see more projects.
-                    </p>
-
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="aboutme-image">
-
-                    <div class="profileImage">
-                        <div class="pI-borderDiv"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="serviceSectionOutside">
-        <img class="svgImage" src="./images/d2-01.svg" alt="SVG_image" srcset="">
-        <section id="serviceSection">
-            <h3 class="ss-heading">Services</h3>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="ss-CH">
-                        <h4>UI-Designer</h4>
-                        <p>A complete design of the Website</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="ss-CH">
-                        <h4>Front-End Development</h4>
-                        <p>Full Front-end Functionalities i.e. React/Website Application</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                    <div class="ss-CH">
-                        <h4>Landing Page</h4>
-                        <p>Design and Code the single static page</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <section id="projectSection">
-        <h4 class="pS-Heading">Projects</h4>
-
-        <!-- Project 1 (Sort Visualizer) -->
-        <div class="projectDiv">
-            <h3>Sorting Visualizer</h3>
-            <div class="row">
-                <div class="col-lg-6 col-md mainPDiv">
-                    <div class="p-image">
-                        <img src="images/p1.png" alt="Project Images" width="100%" height="100%">
-                    </div>
-                    <div class="langUsed">
-                        <ul>
-                            <li>HTML/CSS</li>
-                            <li>React</li>
-                            <li>Algorithms</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md">
-                    <div class="p-desp">
-                        <h4>Decription</h4>
-                        <p>
-                            This is the simple sort visulaizer, which uses different
-                            algorithms to sort the array. In this demo, the height of
-                            1 tower represents the value in an array. You can see
-                            that after sorting all of the towers will be in
-                            ascending order. This algorithms are: Bubble Sort,
-                            Merge Sort etc.
-                        </p>
-                        <a href="https://github.com/Ahmad-Amin/sort-visual" target="_blank"
-                            class="githubLinkP">Github</a>
-                        <a href="https://ahmad-amin.github.io/sort-visual/" target="_blank" class="demoLinkP">Live
-                            Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2 (E-Commerce Website) -->
-
-        <div class="projectDiv">
-            <h3>E-Commerce Website</h3>
-            <div class="row">
-                <div class="col-lg-6 col-md mainPDiv">
-                    <div class="p-image">
-                        <img src="images/p2.PNG" alt="Project Images" width="100%" height="100%">
-                    </div>
-                    <div class="langUsed">
-                        <ul>
-                            <li>HTML/CSS</li>
-                            <li>React</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md">
-                    <div class="p-desp">
-                        <h4>Decription</h4>
-                        <p>
-                            Hey, This is Ahmad Amin. This is my another new Website created using php backend.
-                            The whole front-end design and back-end coding is done by me. So, you can see that
-                            It is a whole package of Full Stack Developement (frontend + backend coding). You can
-                            download the code and con run it on any PC, just read the instructions carefully to run
-                            it succesfully Some images of the website design are attached
-                        </p>
-                        <a href="https://github.com/Ahmad-Amin/E-commerce-Website-php" target="_blank"
-                            class="githubLinkP">Github</a>
-                        <a href="#projectSection" onclick="noDemo()" class="demoLinkP">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3 (To-Do list Application) -->
-
-        <div class="projectDiv">
-            <h3>TODO List</h3>
-            <div class="row">
-                <div class="col-lg-6 col-md mainPDiv">
-                    <div class="p-image">
-                        <img src="images/p3.PNG" alt="Project Images" width="100%" height="100%">
-                    </div>
-                    <div class="langUsed">
-                        <ul>
-                            <li>HTML/CSS</li>
-                            <li>React</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md">
-                    <div class="p-desp">
-                        <h4>Decription</h4>
-                        <p>
-                            Hello, This is Ahmad Amin. I had completed another project using JavaScript Library
-                            i.e. React.js. This is a simple Todo list application, where you can simply add
-                            and remove the items from the list with the beautifull minimalist design.
-                            I used simple states (in classful components for the state managment). Things that I am
-                            managing in the state are:
-
-                            <ol>
-                                <li>Total items in the list [an array of Object]</li>
-                                <li>The new Input entered by the user </li>
-                            </ol>
-                        </p>
-                        <a href="https://github.com/Ahmad-Amin/TO-DO-list-React" target="_blank"
-                            class="githubLinkP">Github</a>
-                        <a href="https://ahmad-amin.github.io/TO-DO-list-React/" target="_blank" class="demoLinkP">Live
-                            Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 4 (YouTube Clone Website) -->
-
-        <div class="projectDiv">
-            <h3>Youtube Clone</h3>
-            <div class="row">
-                <div class="col-lg-6 col-md mainPDiv">
-                    <div class="p-image">
-                        <img src="images/p4.PNG" alt="Project Images" width="100%" height="100%">
-                    </div>
-                    <div class="langUsed">
-                        <ul>
-                            <li>HTML/CSS</li>
-                            <li>React</li>
-                            <li>Youtube API</li>
-                            <li>API</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md">
-                    <div class="p-desp">
-                        <h4>Decription</h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and
-                            scrambled it to make a type specimen book.
-                        </p>
-                        <a href="https://github.com/Ahmad-Amin/youtube_clone_react-API" target="_blank"
-                            class="githubLinkP">Github</a>
-                        <a href="#projectSection" onClick="noDemo()" class="demoLinkP">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <script>
-        function noDemo() {
-            alert("Sorry, It's Demo is currently not available")
-        }
-    </script>
-
+  <div class="card">
+    <div class="badge">Ahmad Amin</div>
+    <p class="eyebrow">This address has moved</p>
+    <h1>We've packed up shop</h1>
+    <p>This site isn't active anymore. Find me at <strong>techwithswag.com</strong> — that's where the new stuff lives now.</p>
+    <a class="button" href="https://techwithswag.com">
+      Take me there
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <p class="redirect-note">Redirecting you automatically in a few seconds…</p>
+  </div>
 </body>
-
 </html>
